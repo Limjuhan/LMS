@@ -16,12 +16,12 @@
 
 <table>
   <tr>
-    <th>로그인 화면</th>
+    <th>메인 화면</th>
     <th>수강 신청 화면</th>
   </tr>
   <tr>
     <td align="center">
-      <img src="./screenshots/courseapply.jpg" alt="로그인 화면" width="300"/>
+      <img src="./screenshots/index.jpg" alt="index" width="300"/>
     </td>
     <td align="center">
       <img src="./screenshots/courseapply.jpg" alt="수강 신청 화면" width="300"/>
