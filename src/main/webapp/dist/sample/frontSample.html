@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Management System UI Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f7fafc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .table th, .table td {
+            border: 1px solid #e2e8f0;
+            padding: 10px;
+            text-align: left;
+        }
+        .table th {
+            background: #edf2f7;
+            font-weight: 600;
+        }
+        .btn {
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+        .btn-primary {
+            background: #3182ce;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #2b6cb0;
+        }
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Personal Information -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">개인 정보</h2>
+            <div class="flex items-center mb-4">
+                <img src="https://via.placeholder.com/80" alt="Profile" class="rounded-full mr-4">
+                <button class="btn btn-secondary">이미지 변경</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div><strong>이름:</strong> 홍길동 (수정 불가)</div>
+                <div><strong>학번:</strong> 20201234 (수정 불가)</div>
+                <div><strong>생년월일:</strong> 2000-01-01 (수정 불가)</div>
+                <div><strong>성별:</strong> 남 (수정 불가)</div>
+                <div><strong>학과:</strong> 컴퓨터공학과 (수정 불가)</div>
+                <div><strong>학년:</strong> 3학년 (수정 불가)</div>
+                <div><strong>연락처:</strong> 010-1234-5678 <button class="btn btn-secondary ml-2">수정</button></div>
+                <div><strong>이메일:</strong> student@univ.ac.kr <button class="btn btn-secondary ml-2">수정</button></div>
+                <div><strong>주소:</strong> 서울시 강남구 <button class="btn btn-secondary ml-2">수정</button></div>
+            </div>
+            <div class="mt-4">
+                <button class="btn btn-primary">비밀번호 변경</button>
+                <button class="btn btn-secondary ml-2">개인 정보 수정 이력</button>
+                <button class="btn btn-secondary ml-2 text-red-600">회원 탈퇴</button>
+            </div>
+        </div>
+
+        <!-- Grade Inquiry -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">성적 확인</h2>
+            <div class="flex items-center mb-4">
+                <select class="border rounded p-2 mr-2">
+                    <option>전체</option>
+                    <option>2024 가을</option>
+                    <option>2025 봄</option>
+                </select>
+                <button class="btn btn-primary">조회</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>학수번호</th>
+                        <th>과목명</th>
+                        <th>학점</th>
+                        <th>취득 점수</th>
+                        <th>평가</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>ABC101</td>
+                        <td>데이터베이스 개론</td>
+                        <td>3</td>
+                        <td>95</td>
+                        <td>A+</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>XYZ202</td>
+                        <td>웹 프로그래밍</td>
+                        <td>3</td>
+                        <td>88</td>
+                        <td>B+</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-4">
+                <p><strong>해당 학기 총 이수 학점:</strong> 6 학점</p>
+                <p><strong>해당 학기 평균 학점 (GPA):</strong> 3.75</p>
+                <p><strong>총 이수 학점:</strong> 60 학점</p>
+                <p><strong>전체 평균 학점 (GPA):</strong> 3.50</p>
+                <button class="btn btn-primary mt-2">성적 증명서 출력</button>
+            </div>
+        </div>
+
+        <!-- Timetable Inquiry -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">시간표</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>시간</th>
+                        <th>월</th>
+                        <th>화</th>
+                        <th>수</th>
+                        <th>목</th>
+                        <th>금</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00-09:50</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10:00-10:50</td>
+                        <td></td>
+                        <td>웹프 02 (B205)</td>
+                        <td></td>
+                        <td>웹프 02 (B205)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14:00-14:50</td>
+                        <td>데베 01 (A101)</td>
+                        <td></td>
+                        <td>데베 01 (A101)</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Course Registration -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">수강신청</h2>
+            <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label>대학구분</label>
+                    <select class="border rounded p-2 w-full">
+                        <option>글로벌인문-인문대학</option>
+                    </select>
+                </div>
+                <div>
+                    <label>학부(과)</label>
+                    <select class="border rounded p-2 w-full">
+                        <option>경영학과</option>
+                    </select>
+                </div>
+                <div>
+                    <label>교과목번호</label>
+                    <input type="text" class="border rounded p-2 w-full" placeholder="과목번호 입력">
+                </div>
+                <div>
+                    <label>교과목명</label>
+                    <input type="text" class="border rounded p-2 w-full" placeholder="교과목명 입력">
+                </div>
+            </div>
+            <p><strong>전체 개설과목:</strong> 50건</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>상태</th>
+                        <th>이수구분</th>
+                        <th>교과목번호</th>
+                        <th>교과목명</th>
+                        <th>교수명</th>
+                        <th>학년</th>
+                        <th>학점</th>
+                        <th>시간</th>
+                        <th>강의계획서</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button class="btn btn-primary">추가</button></td>
+                        <td>전공필수</td>
+                        <td>003312</td>
+                        <td>조선중세의 이해</td>
+                        <td>댕댕이</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>09:00-10:50</td>
+                        <td><button class="btn btn-secondary">미리보기</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3 class="text-lg font-semibold mt-4">신청내역</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>이수구분</th>
+                        <th>학수번호</th>
+                        <th>교과목명</th>
+                        <th>학점</th>
+                        <th>학년</th>
+                        <th>담당교수</th>
+                        <th>시간</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>전공선택</td>
+                        <td>D38920</td>
+                        <td>디리리릭</td>
+                        <td>3.0</td>
+                        <td>3</td>
+                        <td>톤북</td>
+                        <td>13:00-14:50</td>
+                        <td><button class="btn btn-secondary text-red-600">삭제</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Course Registration Status -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">수강신청 현황</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>학수번호</th>
+                        <th>강의명</th>
+                        <th>분반</th>
+                        <th>교수</th>
+                        <th>학점</th>
+                        <th>시간/요일</th>
+                        <th>강의실</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>ABC101</td>
+                        <td>데이터베이스 개론</td>
+                        <td>01</td>
+                        <td>김교수</td>
+                        <td>3</td>
+                        <td>월수 14:00-15:15</td>
+                        <td>A101</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>XYZ202</td>
+                        <td>웹 프로그래밍</td>
+                        <td>02</td>
+                        <td>이교수</td>
+                        <td>3</td>
+                        <td>화목 10:30-11:45</td>
+                        <td>B205</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-4">
+                <p><strong>총 신청 학점:</strong> 6 학점</p>
+                <button class="btn btn-primary">시간표 보기</button>
+                <button class="btn btn-primary ml-2">수강 신청 변경/취소</button>
+            </div>
+        </div>
+
+        <!-- Attendance Management -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4">출석관리</h2>
+            <div class="flex items-center mb-4">
+                <input type="text" class="border rounded p-2 mr-2" placeholder="검색">
+                <button class="btn btn-primary">검색</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>학수번호</th>
+                        <th>강의명</th>
+                        <th>분반</th>
+                        <th>관리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>ABC101</td>
+                        <td>데이터베이스 개론</td>
+                        <td>01</td>
+                        <td><button class="btn btn-primary">출석 관리</button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>XYZ202</td>
+                        <td>웹 프로그래밍</td>
+                        <td>02</td>
+                        <td><button class="btn btn-primary">출석 관리</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-4">
+                <!-- Mock Popup -->
+                <div class="border rounded p-4 bg-gray-50">
+                    <h3 class="text-lg font-semibold">데이터베이스 개론 (ABC101-01)</h3>
+                    <p><strong>날짜:</strong> [달력] 2025-05-07</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>학번</th>
+                                <th>이름</th>
+                                <th>출석 상태</th>
+                                <th>결석 사유</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>20201234</td>
+                                <td>김민지</td>
+                                <td>
+                                    <select class="border rounded p-1">
+                                        <option>출석</option>
+                                        <option>결석</option>
+                                        <option>지각</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>20215678</td>
+                                <td>박철수</td>
+                                <td>
+                                    <select class="border rounded p-1">
+                                        <option>결석</option>
+                                        <option>출석</option>
+                                        <option>지각</option>
+                                    </select>
+                                </td>
+                                <td>감기</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="mt-4">
+                        <button class="btn btn-primary">일괄 출석</button>
+                        <button class="btn btn-primary ml-2">일괄 결석</button>
+                        <button class="btn btn-primary ml-2">저장</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

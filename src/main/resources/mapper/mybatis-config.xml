@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org/DTD config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- config파일에서 사용되는 환경변수 설정 -->
+  <properties resource="mapper/mybatis.properties" />
+  
+  <!-- 별명들 -->
+  <typeAliases>
+  	<typeAlias type="domain.Professor" alias="Professor" />
+  	<typeAlias type="domain.Post" alias="Post" />
+  	<typeAlias type="domain.Notice" alias="Notice" />
+  	<typeAlias type="domain.Course" alias="Course" />
+  	<typeAlias type="domain.CourseTime" alias="CourseTime" />
+  	<typeAlias type="domain.Dept" alias="Dept" />
+  	<typeAlias type="domain.Score" alias="Score" />
+  	<typeAlias type="domain.Student" alias="Student" />
+  	<typeAlias type="domain.Registration" alias="Registration" />
+  	<typeAlias type="domain.Attendance" alias="Attendance" />  	
+  </typeAliases>
+  
+  <!-- Connection 객체  -->
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC" />
+      <dataSource type="POOLED" >
+         <property name="driver" value="${driver}"/>
+         <property name="url" value="${url}"/>
+         <property name="username" value="${username}"/>
+         <property name="password" value="${password}"/>
+      </dataSource>
+    </environment>
+  </environments>
+  <!-- 위에서 ${}로 properties에서 지정한값들을 가져온다 -->
+  
+  <!--  sql 구문을 가진 파일 목록 -->
+  <mappers>
+  	<mapper resource="mapper/professor/ProfessorMapper.xml"/>
+  	<mapper resource="mapper/board/PostMapper.xml"/> 
+  	<mapper resource="mapper/board/NoticeMapper.xml"/>
+  	<mapper resource="mapper/learning_support/CourseMapper.xml"/>
+  	<package name="mapper"/>
+  	<!-- mapper패키지의 인터페이스를 sql구문으로등록 -->
+  </mappers>
+
+</configuration>
