@@ -8,7 +8,7 @@
 > JSP + Servlet + MyBatis 기반의 Model2 MVC 패턴 웹 프로젝트</br>
 > Bootstrap5 및 AdminLTE4 템플릿 기반 반응형 UI 학사관리 시스템</br>
 > 시연영상 링크: https://youtu.be/ACZ_0ZXrgKQ</br>
-> ppt다운로드: https://github.com/Limjuhan/LMS-Project/blob/main/LMS%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8.pptx
+> ppt다운로드: https://github.com/Limjuhan/LMS-Project/blob/main/LMS.pptx
 ---
 
 ## 📸 데모 스크린샷
